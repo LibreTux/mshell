@@ -1,2 +1,2 @@
 # mshell
-cli based email client 
+gui based email client for you by us
