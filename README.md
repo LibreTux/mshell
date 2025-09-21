@@ -19,10 +19,35 @@ A modern, secure email client for Linux with a clean interface and essential fea
 
 ### Prerequisites
 
+#Install Dependecies
 ```bash
-# Install Python 3.8+ if not already installed
+#Debian-based
 sudo apt install python3 python3-pip python3-venv
 
+#Fedora
+sudo dnf install python3-venv python3 python3-pip
+
+#Arch-based
+sudo pacman -S python python-pip python-virtualenv
+
+#Nix
+#In your configuration.nix
+{ config, lib, pkgs, ... }:{
+...
+   environment.systemPackages = with pkgs; [
+     (python312.withPackages (ps: with ps; [
+      pip
+      virtualenv
+     ]))
+...
+];
+...
+}
+
+```
+
+
+```bash
 # Create and activate virtual environment
 python3 -m venv venv
 source venv/bin/activate
