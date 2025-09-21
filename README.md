@@ -58,7 +58,7 @@ python src/mshell.py --install
 
 ```bash
 # Clone repository
-git clone https://github.com/ylibretux/mshell.git
+git clone https://github.com/Libretux/mshell.git
 cd mshell
 
 # Install dev dependencies
